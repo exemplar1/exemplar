@@ -1,4 +1,4 @@
-package org.exemplar.foundation.service.configuration;
+package org.exemplar.service.foundation.configuration;
 
 import org.springframework.context.annotation.Configuration;
 

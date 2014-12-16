@@ -1,4 +1,4 @@
-package org.exemplar.foundation.service.configuration;
+package org.exemplar.service.foundation.configuration;
 
 
 import org.junit.Test;
@@ -32,5 +32,4 @@ public class ServicePropertyConfigurerTest {
         assertEquals("local1", property3);
         assertEquals("password", property4);
     }
-
 }
