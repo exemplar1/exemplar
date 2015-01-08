@@ -1,6 +1,6 @@
 package org.exemplar.service.foundation.configuration;
 
-import org.jasypt.spring31.properties.EncryptablePropertyPlaceholderConfigurer;
+import org.jasypt.spring31.properties.EncryptablePropertySourcesPlaceholderConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 public class TestConfiguration {
 
     @Bean
-    public EncryptablePropertyPlaceholderConfigurer encryptablePropertyPlaceholderConfigurer() {
-        return EncryptablePropertyPlaceholderConfigurerFactory.create("test");
+    public EncryptablePropertySourcesPlaceholderConfigurer encryptablePropertyPlaceholderConfigurer() {
+        return EncryptablePropertySourcesPlaceholderConfigurerFactory.create("test");
     }
 }
