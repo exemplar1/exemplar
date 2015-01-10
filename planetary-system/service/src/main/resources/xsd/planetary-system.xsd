@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="Planet" type="planet"/>
+
+    <xs:element name="Star" type="star"/>
+
+    <xs:element name="Planets">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Planet" type="planet" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="celestialBody" abstract="true">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="radius" type="xs:decimal"/>
+            <xs:element name="circumference" type="xs:decimal"/>
+            <xs:element name="area" type="xs:decimal"/>
+            <xs:element name="volume" type="xs:decimal"/>
+            <xs:element name="mass" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="planet">
+        <xs:complexContent>
+            <xs:extension base="celestialBody">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="star">
+        <xs:complexContent>
+            <xs:extension base="celestialBody">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+</xs:schema>

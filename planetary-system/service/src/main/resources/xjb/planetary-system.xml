@@ -1,0 +1,11 @@
+<jxb:bindings version="2.1"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+              xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
+
+    <jxb:bindings schemaLocation="../xsd/planetary-system.xsd" node="/xs:schema">
+        <jxb:globalBindings>
+            <xjc:simple/>
+        </jxb:globalBindings>
+    </jxb:bindings>
+</jxb:bindings>

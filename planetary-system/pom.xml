@@ -1,0 +1,88 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.2.0.RELEASE</version>
+    </parent>
+
+    <groupId>org.exemplar</groupId>
+    <artifactId>planetary-system</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>${project.artifactId}</name>
+
+    <properties>
+        <service-foundation.version>1.0-SNAPSHOT</service-foundation.version>
+
+        <!-- 3rd party -->
+        <jaxb-xjc.version>2.2.11</jaxb-xjc.version>
+        <maven-compiler-plugin.version>3.2</maven-compiler-plugin.version>
+        <maven-jaxb2-plugin.version>0.12.3</maven-jaxb2-plugin.version>
+        <jaxb-basics.version>0.6.4</jaxb-basics.version>
+        <jaxb2-fluent-api.version>3.0</jaxb2-fluent-api.version>
+        <jaxb2-value-constructor.version>3.0</jaxb2-value-constructor.version>
+        <jaxb-xew-plugin.version>1.3</jaxb-xew-plugin.version>
+        <guava.version>18.0</guava.version>
+        <commons-lang.version>2.6</commons-lang.version>
+        <dozer.version>5.4.0</dozer.version>
+        <h2.version>1.3.168</h2.version>
+    </properties>
+
+    <modules>
+        <module>api</module>
+        <module>domain</module>
+        <module>service</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+
+        <!-- Test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
