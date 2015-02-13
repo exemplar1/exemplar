@@ -10,7 +10,7 @@ public class Planet implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private Integer id;
+    private Long id;
     private String name;
     private BigDecimal radius;
     private BigDecimal circumference;
@@ -18,11 +18,11 @@ public class Planet implements Serializable {
     private BigDecimal volume;
     private BigDecimal mass;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

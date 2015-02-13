@@ -15,6 +15,7 @@
 
     <xs:complexType name="celestialBody" abstract="true">
         <xs:sequence>
+            <xs:element name="id" type="xs:integer" minOccurs="0"/>
             <xs:element name="name" type="xs:string"/>
             <xs:element name="radius" type="xs:decimal"/>
             <xs:element name="circumference" type="xs:decimal"/>
